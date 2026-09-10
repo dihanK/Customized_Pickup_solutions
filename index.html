@@ -151,6 +151,41 @@
             transform: translateY(-6px) rotate(-45deg);
         }
 
+
+        /* =========================
+           OPENING / START PAGE
+        ========================= */
+        .opening-page {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            overflow: hidden;
+            padding-top: 78px;
+        }
+
+        .opening-page img {
+            width: 100%;
+            height: calc(100vh - 78px);
+            display: block;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        @media (max-width: 800px) {
+            .opening-page {
+                min-height: 100svh;
+                padding-top: 70px;
+            }
+
+            .opening-page img {
+                height: calc(100svh - 70px);
+                object-fit: contain;
+            }
+        }
+
         /* =========================
            HERO
         ========================= */
@@ -1419,8 +1454,19 @@
 </button>
 </div>
 </nav>
+
 <!-- =========================
-         MODELS
+     OPENING / START PAGE
+     ========================= -->
+<section class="opening-page" id="home">
+    <img
+        src="assets/page_43.jpg"
+        alt="Piaggio last mile mobility solutions"
+    />
+</section>
+
+<!-- =========================
+     MODELS
     ========================= -->
 <section class="models" id="models">
 <div class="models-overlay"></div>
