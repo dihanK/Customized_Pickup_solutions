@@ -1297,6 +1297,84 @@
                 transition-duration: .01ms !important;
             }
         }
+
+        /* =========================
+           POST-MODELS VISUAL SHOWCASE
+        ========================= */
+        .post-models-showcase {
+            background: #f4f7f9;
+            padding: 85px 5%;
+        }
+
+        .post-models-showcase .section-title {
+            margin-bottom: 35px;
+        }
+
+        .showcase-grid {
+            width: min(1400px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.55fr .75fr;
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .showcase-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: white;
+            border: 1px solid #dfe7eb;
+            box-shadow: 0 18px 45px rgba(5, 30, 45, .10);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 360px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .showcase-card:first-child img {
+            object-position: center;
+        }
+
+        .showcase-card:last-child img {
+            object-position: center;
+        }
+
+        .showcase-label {
+            position: absolute;
+            left: 18px;
+            bottom: 18px;
+            padding: 9px 13px;
+            border-radius: 999px;
+            background: rgba(5, 24, 36, .82);
+            color: white;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .8px;
+            backdrop-filter: blur(8px);
+        }
+
+        @media (max-width: 800px) {
+            .post-models-showcase {
+                padding: 70px 20px;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .showcase-card img {
+                min-height: auto;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1342,29 +1420,6 @@
 </div>
 </nav>
 <!-- =========================
-         HERO
-    ========================= -->
-<header class="hero">
-<img alt="Commercial pickup vehicle" class="hero-image" src="assets/page_1.jpg"/>
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<span class="eyebrow" data-i18n="heroEyebrow">
-                SMART MODIFICATION SOLUTIONS
-            </span>
-<h1 data-i18n="heroTitle">
-                Customized Commercial CARGO Solutions
-            </h1>
-<p data-i18n="heroText">
-                From cargo transportation to mobile shops and specialized
-                utility vehicles, explore smart modification solutions
-                designed around different business requirements.
-            </p>
-<a class="primary-btn" data-i18n="heroButton" href="#solutions">
-                Explore solutions ↓
-            </a>
-</div>
-</header>
-<!-- =========================
          MODELS
     ========================= -->
 <section class="models" id="models">
@@ -1397,6 +1452,30 @@
 </div>
 </div>
 </section>
+
+<!-- =========================
+         HERO
+    ========================= -->
+<header class="hero">
+<img alt="Commercial pickup vehicle" class="hero-image" src="assets/page_1.jpg"/>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<span class="eyebrow" data-i18n="heroEyebrow">
+                SMART MODIFICATION SOLUTIONS
+            </span>
+<h1 data-i18n="heroTitle">
+                Customized Commercial CARGO Solutions
+            </h1>
+<p data-i18n="heroText">
+                From cargo transportation to mobile shops and specialized
+                utility vehicles, explore smart modification solutions
+                designed around different business requirements.
+            </p>
+<a class="primary-btn" data-i18n="heroButton" href="#solutions">
+                Explore solutions ↓
+            </a>
+</div>
+</header>
 <!-- =========================
          OVERVIEW
     ========================= -->
@@ -1905,7 +1984,7 @@
 <span class="gallery-number">
                             
                         </span>
-<h3 data-gallery-en="COLOMBO" data-gallery-si="එළවළු වෙළඳසැල් වාහනය">
+<h3 data-gallery-en="COLOMBO" data-gallery-si="කොළඹ">
                             Colombo
                         </h3>
 
@@ -1927,7 +2006,7 @@
 <span class="gallery-number">
                             
                         </span>
-<h3 data-gallery-en="ANURADHAPURA" data-gallery-si="">
+<h3 data-gallery-en="ANURADHAPURA" data-gallery-si="අනුරාධපුරය">
                             Bakery Mobile Unit
                         </h3>
 
@@ -1952,7 +2031,7 @@
 <span class="gallery-number">
                            
                         </span>
-<h3 data-gallery-en="KANDY" data-gallery-si="විශේෂිත ප්‍රවාහන විසඳුම්">
+<h3 data-gallery-en="KANDY" data-gallery-si="මහනුවර">
                             Specialized Transport Solutions
                         </h3>
 
@@ -1974,7 +2053,7 @@
 <span class="gallery-number">
                             
                         </span>
-<h3 data-gallery-en="JAFFNA" data-gallery-si="බිත්තර ප්‍රවාහන විසඳුම">
+<h3 data-gallery-en="JAFFNA" data-gallery-si="යාපනය">
                             Egg Transport Solution
                         </h3>
 
@@ -2298,7 +2377,7 @@
                     "වාහන body සංකල්ප එකවර බලන්න",
 
                 galleryText:
-                    "කාණ්ඩගත ඉදිරිපත් කිරීමේ ඡායාරූප හරහා වාහන විසඳුම් බලන්න.",
+                    "",
 
                 ctaTitle:
                     "ඔබගේ Pickup විසඳුම් ඉදිරිපත් කිරීමට සූදානම්ද?",
@@ -3343,4 +3422,4 @@
 
     </script>
 </body>
-</html>
+</html>     
