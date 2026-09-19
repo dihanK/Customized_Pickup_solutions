@@ -1652,7 +1652,257 @@
             .model-next-btn::after { display: none; }
         }
 
-    </style>
+    
+        /* =========================
+           PIAGGIO ADVANTAGE
+           Added directly after cover page
+        ========================= */
+        .piaggio-advantage {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 8% 12%, rgba(243,181,43,.12), transparent 25%),
+                radial-gradient(circle at 92% 85%, rgba(10,73,104,.10), transparent 30%),
+                #ffffff;
+            padding: 105px 5% 95px;
+        }
+
+        .piaggio-advantage::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .45;
+            background-image:
+                linear-gradient(rgba(9,40,59,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(9,40,59,.035) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: linear-gradient(135deg, black, transparent 72%);
+        }
+
+        .piaggio-advantage-inner {
+            position: relative;
+            z-index: 2;
+            width: min(1200px, 100%);
+            margin: 0 auto;
+        }
+
+        .piaggio-heading {
+            max-width: 820px;
+            margin-bottom: 45px;
+        }
+
+        .piaggio-heading .eyebrow {
+            margin-bottom: 14px;
+        }
+
+        .piaggio-heading h2 {
+            margin: 0 0 16px;
+            color: #09283b;
+            font-size: clamp(36px, 5vw, 62px);
+            line-height: 1;
+            letter-spacing: -2.5px;
+        }
+
+        .piaggio-heading p {
+            margin: 0;
+            color: #687b87;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .piaggio-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+        }
+
+        .piaggio-card {
+            position: relative;
+            min-height: 190px;
+            padding: 25px 24px 23px;
+            border: 1px solid #e1e8ec;
+            border-radius: 18px;
+            background: rgba(255,255,255,.92);
+            box-shadow: 0 10px 30px rgba(5,30,45,.055);
+            overflow: hidden;
+            cursor: default;
+            transition:
+                transform .35s var(--ease-out),
+                box-shadow .35s ease,
+                border-color .35s ease;
+        }
+
+        .piaggio-card::after {
+            content: "";
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            right: -55px;
+            top: -55px;
+            border-radius: 50%;
+            background: rgba(243,181,43,.10);
+            transition: transform .4s var(--ease-out);
+        }
+
+        .piaggio-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(243,181,43,.55);
+            box-shadow: 0 18px 42px rgba(5,30,45,.11);
+        }
+
+        .piaggio-card:hover::after {
+            transform: scale(1.5);
+        }
+
+        .piaggio-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 17px;
+            border-radius: 14px;
+            background: #f4f7f9;
+            border: 1px solid #e4eaed;
+            font-size: 24px;
+        }
+
+        .piaggio-card h3 {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 9px;
+            color: #10364a;
+            font-size: 18px;
+            line-height: 1.25;
+        }
+
+        .piaggio-card p {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #6d7f89;
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        .piaggio-summary {
+            margin-top: 30px;
+            padding: 30px 34px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #09283b 0%, #0d4058 100%);
+            color: white;
+            box-shadow: 0 20px 50px rgba(5,30,45,.16);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .piaggio-summary-label {
+            color: #f3b52b;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+
+        .piaggio-summary h3 {
+            margin: 0;
+            font-size: clamp(24px, 3vw, 36px);
+            line-height: 1.15;
+            letter-spacing: -.8px;
+        }
+
+        .piaggio-summary-side {
+            text-align: right;
+        }
+
+        .piaggio-summary-side strong {
+            display: block;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .piaggio-summary-side span {
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+        }
+
+        .piaggio-cross {
+            margin-top: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #617581;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .piaggio-cross b {
+            color: #09283b;
+        }
+
+        @media (max-width: 1000px) {
+            .piaggio-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .piaggio-advantage {
+                padding: 80px 20px;
+            }
+
+            .piaggio-heading {
+                margin-bottom: 32px;
+            }
+
+            .piaggio-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .piaggio-card {
+                min-height: auto;
+            }
+
+            .piaggio-summary {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding: 26px 23px;
+            }
+
+            .piaggio-summary-side {
+                text-align: left;
+            }
+
+            .piaggio-cross {
+                flex-wrap: wrap;
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+
+    
+        /* CLICKABLE PIAGGIO ADVANTAGE */
+        .piaggio-option-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:1100px;margin:0 auto 24px}
+        .piaggio-option-btn{appearance:none;border:1px solid #dce5ea;background:#fff;color:#173d51;padding:12px 16px;border-radius:999px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:all .25s ease}
+        .piaggio-option-btn:hover{transform:translateY(-2px);border-color:#f3b52b;box-shadow:0 8px 22px rgba(5,30,45,.08)}
+        .piaggio-option-btn.active{background:#f3b52b;border-color:#f3b52b;color:#09283b;box-shadow:0 10px 25px rgba(243,181,43,.25)}
+        .piaggio-feature-panel{position:relative;min-height:300px;padding:48px 55px;border-radius:28px;background:linear-gradient(135deg,#09283b,#0d4058);color:#fff;box-shadow:0 24px 65px rgba(5,30,45,.18);overflow:hidden;transition:opacity .2s ease,transform .2s ease}
+        .piaggio-feature-content{position:relative;z-index:2;max-width:850px}
+        .piaggio-feature-number{display:inline-flex;align-items:center;justify-content:center;min-width:55px;height:30px;padding:0 10px;border-radius:999px;background:rgba(243,181,43,.15);color:#f3b52b;font-size:12px;font-weight:800;letter-spacing:1px;margin-bottom:18px}
+        .piaggio-feature-icon{font-size:44px;line-height:1;margin-bottom:15px}
+        .piaggio-feature-content h3{margin:0 0 13px;color:#fff;font-size:clamp(28px,4vw,44px);line-height:1.08}
+        .piaggio-feature-content p{margin:0;color:rgba(255,255,255,.8);font-size:16px;line-height:1.75;max-width:780px}
+        @media(max-width:700px){.piaggio-option-buttons{gap:8px}.piaggio-option-btn{padding:10px 12px;font-size:12px}.piaggio-feature-panel{padding:32px 24px;min-height:320px;border-radius:22px}.piaggio-feature-icon{font-size:38px}.piaggio-feature-content p{font-size:14px}}
+
+</style>
 </head>
 <body>
 <!-- =========================
@@ -1707,9 +1957,55 @@
     />
 </section>
 
+
 <!-- =========================
-     MODELS
-    ========================= -->
+     WHY CHOOSE PIAGGIO
+     ========================= -->
+<section class="piaggio-advantage" id="piaggio-advantage">
+    <div class="piaggio-advantage-inner">
+        <div class="piaggio-heading reveal">
+            <h2>WHY CHOOSE PIAGGIO</h2>
+            <p>Click an option to discover what makes Piaggio different.</p>
+        </div>
+
+        <div class="piaggio-option-buttons reveal">
+            <button type="button" class="piaggio-option-btn active" data-index="0">🇮🇹 Italian Technology</button>
+            <button type="button" class="piaggio-option-btn" data-index="1">🏆 Three-Wheeler Pioneer</button>
+            <button type="button" class="piaggio-option-btn" data-index="2">⏳ 142+ Years Heritage</button>
+            <button type="button" class="piaggio-option-btn" data-index="3">🌍 Global Reach</button>
+            <button type="button" class="piaggio-option-btn" data-index="4">🛣️ Proven on the Road</button>
+            <button type="button" class="piaggio-option-btn" data-index="5">📦 Loading Capacity</button>
+            <button type="button" class="piaggio-option-btn" data-index="6">🔄 Dual-Purpose</button>
+            <button type="button" class="piaggio-option-btn" data-index="7">💰 Low Maintenance</button>
+            <button type="button" class="piaggio-option-btn" data-index="8">🛡️ Safety &amp; Confidence</button>
+        </div>
+
+        <div class="piaggio-feature-panel reveal" id="piaggioFeaturePanel">
+            <div class="piaggio-feature-content">
+                <div class="piaggio-feature-number" id="piaggioFeatureNumber">01 / 09</div>
+                <div class="piaggio-feature-icon" id="piaggioFeatureIcon">🇮🇹</div>
+                <h3 id="piaggioFeatureTitle">Italian Technology</h3>
+                <p id="piaggioFeatureText">Born from Italian engineering excellence, Piaggio brings advanced technology and innovation to every journey.</p>
+            </div>
+        </div>
+<div class="piaggio-summary reveal">
+            <div>
+                <div class="piaggio-summary-label">The Piaggio Advantage</div>
+                <h3>Italian Technology + 142+ Years of Heritage + Proven Performance</h3>
+            </div>
+            <div class="piaggio-summary-side">
+                <strong>Backed by Singer</strong>
+                <span>148+ Years of Trust in Sri Lanka.</span>
+            </div>
+        </div>
+
+        <div class="piaggio-cross reveal">
+            <b>PIAGGIO</b><span>×</span><b>SINGER</b><span>—</span><span>Global Engineering. Local Trust.</span>
+        </div>
+    </div>
+</section>
+
+
 <section class="models" id="models">
 <div class="models-overlay"></div>
 <div class="section-inner models-content">
@@ -3560,7 +3856,49 @@
         );
 
 
-        /* =========================
+        
+        /* CLICKABLE PIAGGIO ADVANTAGE */
+        (function(){
+            const data=[
+                ["🇮🇹","Italian Technology","Born from Italian engineering excellence, Piaggio brings advanced technology and innovation to every journey."],
+                ["🏆","A Pioneer in Three-Wheelers","The world's first commercial three-wheeler — built on a legacy of innovation."],
+                ["⏳","142+ Years of Heritage","Over 142 years of experience, expertise and continuous innovation."],
+                ["🌍","Global Reach","Piaggio products are exported to around 100 countries worldwide."],
+                ["🛣️","Proven on the Road","Over 3 million Piaggio three-wheelers are running on Indian roads."],
+                ["📦","Exceptional Loading Capacity","Designed to carry more, making every trip more productive."],
+                ["🔄","Dual-Purpose Versatility","One vehicle for both business and everyday transportation needs."],
+                ["💰","Low Maintenance","Designed for lower maintenance requirements and greater value over time."],
+                ["🛡️","Safety & Confidence","Safety-focused engineering designed to give you confidence on every journey."]
+            ];
+            let current=0;
+            const panel=document.getElementById("piaggioFeaturePanel");
+            const number=document.getElementById("piaggioFeatureNumber");
+            const icon=document.getElementById("piaggioFeatureIcon");
+            const title=document.getElementById("piaggioFeatureTitle");
+            const text=document.getElementById("piaggioFeatureText");
+            const buttons=document.querySelectorAll(".piaggio-option-btn");
+            if(!panel||!number||!icon||!title||!text||!buttons.length)return;
+            function show(index,animate){
+                current=(index+data.length)%data.length;
+                const item=data[current];
+                function update(){
+                    number.textContent=String(current+1).padStart(2,"0")+" / 09";
+                    icon.textContent=item[0];
+                    title.textContent=item[1];
+                    text.textContent=item[2];
+                    buttons.forEach((b,i)=>b.classList.toggle("active",i===current));
+                }
+                if(animate){
+                    panel.style.opacity="0";
+                    panel.style.transform="translateY(8px)";
+                    setTimeout(function(){update();panel.style.opacity="1";panel.style.transform="translateY(0)"},140);
+                }else update();
+            }
+            buttons.forEach(b=>b.addEventListener("click",()=>show(Number(b.getAttribute("data-index")),true)));
+            show(0,false);
+        })();
+
+/* =========================
            MODELS SLIDER
         ========================= */
 
