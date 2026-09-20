@@ -1902,6 +1902,247 @@
         .piaggio-feature-content p{margin:0;color:rgba(255,255,255,.8);font-size:16px;line-height:1.75;max-width:780px}
         @media(max-width:700px){.piaggio-option-buttons{gap:8px}.piaggio-option-btn{padding:10px 12px;font-size:12px}.piaggio-feature-panel{padding:32px 24px;min-height:320px;border-radius:22px}.piaggio-feature-icon{font-size:38px}.piaggio-feature-content p{font-size:14px}}
 
+        /* =========================
+           MODERN LIGHT THEME OVERRIDE
+           Content and interactions remain unchanged.
+        ========================= */
+        :root {
+            --ink: #17384a;
+            --muted: #6d7f89;
+            --line: #dfe8ec;
+            --surface: #ffffff;
+            --soft: #f5f8fa;
+            --soft-blue: #eef6f8;
+            --accent: #e3a91b;
+            --accent-soft: #fff4cf;
+            --shadow: 0 18px 50px rgba(23,56,74,.09);
+        }
+
+        body {
+            background: #f7fafb;
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .navbar {
+            height: 76px;
+            background: rgba(255,255,255,.92);
+            border-bottom: 1px solid rgba(223,232,236,.9);
+            box-shadow: 0 8px 28px rgba(23,56,74,.06);
+        }
+
+        .navbar.scrolled { background: rgba(255,255,255,.98); border-bottom-color: var(--line); box-shadow: 0 12px 30px rgba(23,56,74,.1); }
+        .brand { color: var(--ink); letter-spacing: 1.2px; }
+        .brand:hover { color: #b47a00; }
+        .nav-links a { color: #58707c; }
+        .nav-links a:hover { color: #b47a00; }
+        .language-switcher { background: #f0f5f7; border: 1px solid var(--line); }
+        .lang-btn { color: #607681; }
+        .lang-btn.active { background: var(--accent); color: #17384a; }
+        .menu-btn { border-color: var(--line); background: #f5f8fa; }
+        .menu-btn span { background: var(--ink); }
+
+        .hero {
+            min-height: 690px;
+            background: linear-gradient(135deg, #f7fbfc 0%, #edf6f8 100%);
+        }
+        .hero-image {
+            left: 43%; width: 57%; opacity: 1;
+            object-position: center;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.78) 18%, #000 42%);
+            mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.78) 18%, #000 42%);
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(247,251,252,1) 0%, rgba(247,251,252,.94) 34%, rgba(247,251,252,.15) 72%, rgba(247,251,252,0) 100%);
+        }
+        .hero::before, .hero::after { display: none; }
+        .hero-content { padding-top: 48px; }
+        .eyebrow { color: #a87500; }
+        .eyebrow::before { background: var(--accent); box-shadow: 0 0 0 5px rgba(227,169,27,.16); }
+        .hero h1 { color: var(--ink); max-width: 720px; letter-spacing: -2.8px; }
+        .hero p { color: #607681; max-width: 590px; }
+        .primary-btn { background: var(--accent); color: #17384a; border-radius: 11px; box-shadow: 0 10px 24px rgba(227,169,27,.22); }
+        .primary-btn:hover { box-shadow: 0 15px 32px rgba(227,169,27,.3); }
+
+        section { padding: 108px 5%; }
+        .section-title h2 { color: var(--ink); }
+        .section-title p, .overview-text { color: var(--muted); }
+        .overview, .solutions, .gallery { background: var(--surface); color: var(--ink); }
+        .specifications, .post-models-showcase { background: #f3f7f9; }
+        .stat { background: var(--surface); border-color: var(--line); box-shadow: 0 5px 18px rgba(23,56,74,.035); }
+        .stat strong { color: var(--ink); }
+        .stat span, .spec-name { color: #718691; }
+        .spec-item { border-color: var(--line); box-shadow: 0 5px 18px rgba(23,56,74,.035); }
+        .spec-value { color: #24485a; }
+
+        .models {
+            min-height: 560px;
+            background-color: #edf6f8;
+            color: var(--ink);
+        }
+        .models-overlay { background: linear-gradient(90deg, rgba(237,246,248,.98) 0%, rgba(237,246,248,.9) 38%, rgba(237,246,248,.34) 100%); }
+        .models::before, .models::after { display: none; }
+        .models .section-title h2, .model-info h3 { color: var(--ink); }
+        .models .section-title p, .model-info p { color: var(--muted); }
+        .model-image-wrap { background: white; border-color: var(--line); box-shadow: var(--shadow); }
+        .model-number, .model-counter { color: #a87500; }
+        .model-next-btn { background: var(--accent); color: var(--ink); }
+
+        .solution-top { align-items: center; }
+        .search-box { background: white; border-color: var(--line); border-radius: 12px; color: var(--ink); box-shadow: 0 5px 18px rgba(23,56,74,.035); }
+        .search-box:focus { border-color: var(--accent); }
+        .card { border-color: var(--line); box-shadow: 0 8px 24px rgba(23,56,74,.055); }
+        .card:hover { box-shadow: 0 20px 42px rgba(23,56,74,.12); }
+        .tag { color: #a87500; background: var(--accent-soft); }
+        .card h3 { color: var(--ink); }
+        .card p { color: var(--muted); }
+        .card button { color: #17627f; }
+        .slider-arrow, .slider-counter { background: rgba(255,255,255,.92); color: var(--ink); box-shadow: 0 5px 16px rgba(23,56,74,.13); }
+        .slider-arrow:hover { background: var(--accent); color: var(--ink); }
+
+        .gallery .section-title p { color: var(--muted); }
+        .gallery-group { background: #f7fafb; border-color: var(--line); box-shadow: 0 8px 25px rgba(23,56,74,.05); }
+        .gallery-group:hover { background: white; box-shadow: var(--shadow); }
+        .gallery-item { background: #eaf2f5; }
+        .gallery-description h3 { color: #a87500; }
+        .gallery-description p { color: var(--muted); }
+        .gallery-number { color: #8ba0aa; }
+
+        .cta { background: #fff3c9; }
+        .cta h2 { color: var(--ink); }
+        .cta p { color: #617681; }
+        .cta .primary-btn { background: var(--ink); color: white; box-shadow: 0 10px 24px rgba(23,56,74,.16); }
+        footer { background: #edf4f6; color: #6f838d; border-top: 1px solid var(--line); }
+
+        .showcase-label { background: rgba(255,255,255,.9); color: var(--ink); border: 1px solid rgba(255,255,255,.7); }
+        .modal { background: rgba(28,58,72,.38); }
+        .modal-close, .modal-arrow { background: white; color: var(--ink); box-shadow: 0 6px 18px rgba(23,56,74,.16); }
+        .modal-image-wrapper { background: #f1f6f8; }
+        .modal-image-counter { background: white; color: var(--ink); box-shadow: 0 5px 16px rgba(23,56,74,.13); }
+        .modal-arrow:hover, .modal-close:hover { background: var(--accent); color: var(--ink); }
+
+        .piaggio-summary, .piaggio-feature-panel { background: linear-gradient(135deg, #eaf5f7 0%, #f8fbfc 100%); color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow); }
+        .piaggio-summary-label, .piaggio-cross b, .piaggio-feature-number { color: #a87500; }
+        .piaggio-summary h3, .piaggio-summary-side strong, .piaggio-feature-content h3 { color: var(--ink); }
+        .piaggio-summary-side span, .piaggio-feature-content p { color: var(--muted); }
+        .piaggio-feature-number { background: var(--accent-soft); }
+
+        @media (max-width: 800px) {
+            .navbar { height: 70px; }
+            .nav-links { top: 70px; background: rgba(255,255,255,.98); border-color: var(--line); box-shadow: 0 18px 40px rgba(23,56,74,.12); }
+            .nav-links a { color: var(--ink); }
+            .nav-links a:hover { background: #f1f6f8; }
+            .hero { min-height: 760px; }
+            .hero-image { left: 0; width: 100%; opacity: .28; -webkit-mask-image: none; mask-image: none; }
+            .hero-overlay { background: linear-gradient(180deg, rgba(247,251,252,.88) 0%, rgba(247,251,252,.96) 65%, rgba(247,251,252,1) 100%); }
+            .hero-content { padding-top: 76px; }
+            .models-overlay { background: rgba(237,246,248,.9); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-image { animation: none; }
+        }
+
+        /* =========================
+           LUXURY SHOWROOM FINISH
+        ========================= */
+        :root {
+            --ink: #182f3b;
+            --muted: #71818a;
+            --line: #e2e8e8;
+            --champagne: #c4963d;
+            --champagne-light: #f8efd9;
+            --paper: #fbfaf7;
+            --surface: #ffffff;
+            --lux-shadow: 0 24px 70px rgba(27,49,58,.1);
+        }
+
+        body { background: var(--paper); color: var(--ink); }
+        .navbar { height: 82px; padding: 0 5.5%; background: rgba(251,250,247,.94); border-bottom: 1px solid rgba(196,150,61,.2); box-shadow: 0 10px 35px rgba(27,49,58,.07); }
+        .navbar.scrolled { height: 70px; background: rgba(251,250,247,.98); border-bottom-color: rgba(196,150,61,.32); }
+        .brand { color: var(--ink); font-size: 14px; letter-spacing: 2px; }
+        .brand::after { content: ""; display: block; width: 28px; height: 2px; margin-top: 5px; background: var(--champagne); }
+        .nav-links { gap: 24px; }
+        .nav-links a { color: #536a73; font-size: 12px; letter-spacing: .25px; }
+        .nav-links a:hover { color: var(--champagne); }
+        .language-switcher { background: #f2f0e9; border: 1px solid #e5dfcf; }
+        .lang-btn { color: #6d7777; }
+        .lang-btn.active { background: var(--champagne); color: white; }
+        .menu-btn { border-color: #dedbd2; background: #f5f3ed; }
+        .menu-btn span { background: var(--ink); }
+
+        .opening-page { background: var(--paper); padding-top: 82px; }
+        .opening-page img { filter: saturate(.92) contrast(1.02); }
+        .hero { min-height: 720px; background: linear-gradient(115deg, #fbfaf7 0%, #f3f0e8 64%, #e9f0ef 100%); }
+        .hero-image { left: 39%; width: 61%; opacity: .98; -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.7) 17%, #000 38%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.7) 17%, #000 38%); }
+        .hero-overlay { background: linear-gradient(90deg, rgba(251,250,247,1) 0%, rgba(251,250,247,.94) 32%, rgba(251,250,247,.25) 71%, rgba(251,250,247,0) 100%); }
+        .hero-content { padding-top: 64px; }
+        .eyebrow { color: var(--champagne); letter-spacing: 3px; }
+        .hero h1, .section-title h2, .piaggio-heading h2, .cta h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+        .hero h1 { color: var(--ink); font-size: clamp(48px, 6.2vw, 88px); letter-spacing: -3.6px; max-width: 780px; }
+        .hero p { color: #64767d; font-size: 17px; }
+        .primary-btn, .model-next-btn { background: var(--ink); color: white; border-radius: 999px; box-shadow: 0 12px 28px rgba(24,47,59,.16); padding: 16px 27px; }
+        .primary-btn:hover, .model-next-btn:hover { background: var(--champagne); color: white; box-shadow: 0 16px 32px rgba(196,150,61,.28); }
+
+        section { padding: 120px 5.5%; }
+        .section-title h2, .piaggio-heading h2 { color: var(--ink); }
+        .section-title p, .overview-text, .piaggio-heading p { color: var(--muted); }
+        .overview, .solutions, .gallery { background: var(--paper); }
+        .specifications, .post-models-showcase { background: #f1f5f4; }
+        .stat, .spec-item, .card, .gallery-group, .piaggio-card { background: rgba(255,255,255,.82); border-color: var(--line); box-shadow: 0 10px 30px rgba(27,49,58,.045); }
+        .stat:hover, .spec-item:hover, .card:hover, .gallery-group:hover, .piaggio-card:hover { border-color: rgba(196,150,61,.58); box-shadow: var(--lux-shadow); }
+        .stat strong, .spec-value, .card h3, .piaggio-card h3 { color: var(--ink); }
+        .tag { color: #96702a; background: var(--champagne-light); border-radius: 999px; }
+        .card button { color: #9a722a; }
+
+        .models { background: #e9f0ef; color: var(--ink); }
+        .models-overlay { background: linear-gradient(90deg, rgba(233,240,239,.98) 0%, rgba(233,240,239,.9) 40%, rgba(233,240,239,.28) 100%); }
+        .models .section-title h2, .model-info h3 { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+        .model-image-wrap { border: 1px solid rgba(196,150,61,.25); border-radius: 24px; box-shadow: var(--lux-shadow); }
+        .model-next-btn { background: var(--champagne); color: white; }
+        .model-number { color: var(--champagne); }
+
+        .solution-top { margin-bottom: 45px; }
+        .search-box { border-radius: 999px; background: white; border-color: var(--line); padding: 16px 20px; }
+        .card { border-radius: 20px; }
+        .card-body { padding: 23px; }
+        .card h3 { font-family: Georgia, "Times New Roman", serif; font-size: 20px; font-weight: 500; }
+        .slider-arrow, .slider-counter, .modal-close, .modal-arrow, .modal-image-counter { background: rgba(255,255,255,.94); color: var(--ink); }
+        .slider-arrow:hover, .modal-arrow:hover, .modal-close:hover { background: var(--champagne); color: white; }
+
+        .gallery-group { border-radius: 24px; padding: 20px; }
+        .gallery-description h3 { color: var(--champagne); font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+        .gallery-description p { color: var(--muted); }
+        .cta { background: linear-gradient(135deg, #f8efd9, #f3e4c2); border-top: 1px solid #eee2c9; border-bottom: 1px solid #eee2c9; }
+        .cta h2 { color: var(--ink); }
+        .cta .primary-btn { background: var(--ink); }
+        footer { background: #eef3f2; color: #708087; border-top: 1px solid var(--line); }
+
+        .piaggio-advantage { background: radial-gradient(circle at 10% 10%, rgba(196,150,61,.12), transparent 28%), var(--paper); }
+        .piaggio-option-btn { background: white; border-color: var(--line); color: var(--ink); }
+        .piaggio-option-btn:hover, .piaggio-option-btn.active { border-color: var(--champagne); }
+        .piaggio-option-btn.active { background: var(--champagne); color: white; box-shadow: 0 12px 26px rgba(196,150,61,.22); }
+        .piaggio-feature-panel, .piaggio-summary { background: linear-gradient(135deg, #f8efd9 0%, #fffdf8 100%); border: 1px solid #eadcbd; color: var(--ink); box-shadow: var(--lux-shadow); }
+        .piaggio-feature-content h3, .piaggio-summary h3, .piaggio-summary-side strong { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+        .piaggio-feature-content p, .piaggio-summary-side span { color: var(--muted); }
+        .piaggio-feature-number { background: var(--champagne); color: white; }
+        .piaggio-feature-icon { font-size: 0; }
+        .piaggio-feature-icon .italy-flag { width: 58px; height: 38px; }
+
+        .italy-flag { display: inline-block; width: 19px; height: 13px; vertical-align: -.1em; border-radius: 2px; background: linear-gradient(90deg, #159447 0 33.333%, #fff 33.333% 66.666%, #ce2b37 66.666% 100%); box-shadow: 0 1px 2px rgba(24,47,59,.18); }
+        .piaggio-option-btn .italy-flag { width: 18px; height: 12px; margin-right: 7px; vertical-align: -1px; }
+
+        @media (max-width: 800px) {
+            .navbar { height: 70px; }
+            .opening-page { padding-top: 70px; }
+            .nav-links { top: 70px; background: rgba(251,250,247,.98); border-color: #e5dfcf; }
+            .hero { min-height: 780px; }
+            .hero-image { left: 0; width: 100%; opacity: .25; -webkit-mask-image: none; mask-image: none; }
+            .hero-overlay { background: linear-gradient(180deg, rgba(251,250,247,.86) 0%, rgba(251,250,247,.96) 66%, #fbfaf7 100%); }
+            .hero-content { padding-top: 74px; }
+            section { padding: 88px 20px; }
+        }
+
 </style>
 </head>
 <body>
@@ -1969,7 +2210,7 @@
         </div>
 
         <div class="piaggio-option-buttons reveal">
-            <button type="button" class="piaggio-option-btn active" data-index="0">🇮🇹 Italian Technology</button>
+            <button type="button" class="piaggio-option-btn active" data-index="0"><span class="italy-flag" aria-hidden="true"></span>Italian Technology</button>
             <button type="button" class="piaggio-option-btn" data-index="1">🏆 Three-Wheeler Pioneer</button>
             <button type="button" class="piaggio-option-btn" data-index="2">⏳ 142+ Years Heritage</button>
             <button type="button" class="piaggio-option-btn" data-index="3">🌍 Global Reach</button>
@@ -1983,7 +2224,7 @@
         <div class="piaggio-feature-panel reveal" id="piaggioFeaturePanel">
             <div class="piaggio-feature-content">
                 <div class="piaggio-feature-number" id="piaggioFeatureNumber">01 / 09</div>
-                <div class="piaggio-feature-icon" id="piaggioFeatureIcon">🇮🇹</div>
+                <div class="piaggio-feature-icon" id="piaggioFeatureIcon"><span class="italy-flag" aria-hidden="true"></span></div>
                 <h3 id="piaggioFeatureTitle">Italian Technology</h3>
                 <p id="piaggioFeatureText">Born from Italian engineering excellence, Piaggio brings advanced technology and innovation to every journey.</p>
             </div>
@@ -3883,7 +4124,7 @@
                 const item=data[current];
                 function update(){
                     number.textContent=String(current+1).padStart(2,"0")+" / 09";
-                    icon.textContent=item[0];
+                    icon.innerHTML=current===0 ? '<span class="italy-flag" aria-hidden="true"></span>' : item[0];
                     title.textContent=item[1];
                     text.textContent=item[2];
                     buttons.forEach((b,i)=>b.classList.toggle("active",i===current));
