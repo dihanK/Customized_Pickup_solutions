@@ -1309,9 +1309,20 @@
             }
 
             .slider-arrow {
+                position: absolute;
                 width: 36px;
                 height: 36px;
                 font-size: 25px;
+                top: 50%;
+                z-index: 5;
+            }
+
+            .slider-arrow.prev {
+                left: 8px;
+            }
+
+            .slider-arrow.next {
+                right: 8px;
             }
         }
 
@@ -1539,9 +1550,15 @@
 
         .primary-btn,
         .model-next-btn,
-        .slider-arrow,
         .modal-close {
             position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        /* Keep image-slider arrows anchored inside the image. */
+        .slider-arrow {
+            position: absolute;
             overflow: hidden;
             isolation: isolate;
         }
